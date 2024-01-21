@@ -26,7 +26,6 @@ button {
 ul {
   margin-top: 0;
   margin-bottom: 0;
-  padding-left: 0;
 }
 
 img {
@@ -42,6 +41,11 @@ img {
 .gallery {
   display: flex;
   column-gap: 24px;
+}
+
+ul.gallery {
+  padding-left: 32px;
+  padding-right: 32px;
 }
 
 .gallery-item {
