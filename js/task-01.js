@@ -1,15 +1,18 @@
 // task 1
 
-const categories = document.querySelectorAll("#categories .item");
-console.log("Number of categoies:", categories.length);
+const categoriesEl = document.querySelector("#categories");
+const categoiesList = categoriesEl.children;
+console.log("Number of categoies:", categoiesList.length);
 
 // task 2
 
 let counter = 0;
 
-categories.forEach(category => {
-  const title = category.querySelector("h2").textContent;
-  const elementsCount = category.querySelectorAll("li").length;
+[...categoiesList].forEach(category => {
+  const titleEl = category.firstElementChild;
+  const listEl = titleEl.nextElementSibling;
 
-  console.log(`Category: ${title}\nElements: ${elementsCount}`);
+  const title = titleEl.textContent;
+  const listCounter = listEl.childElementCount;
+  console.log(`Category: ${title}\nElements: ${listCounter}`);
 });
